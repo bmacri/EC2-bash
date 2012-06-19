@@ -25,3 +25,13 @@ echo "Please choose an ami from the following list.  Enter the ami below AND als
 echo ec2-describe-images -o amazon
 read USER_AMI_CHOICE
 
+#launch the machine
+ec2-run-instances $USER_AMI_CHOICE -K $EC2_PRIVATE_KEY
+
+#all ports are blocked by default - authorize port 80 (http) and port 22 (ssh)
+ec2-authorize default -p 22
+ec2-authorize default -p 80
+
+echo "Please enter the url you kept track of from earlier: "
+read EC2_URL
+ssh -i $EC2_URL -K $EC2_PRIVATE_KEY -C $EC2_CERT
