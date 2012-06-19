@@ -15,12 +15,9 @@ if yesno == 'y':
 elif yesno == 'n'
 	go back to beginning and ask for path again
 
-#create a private key and save the output of the command to a file
-logsave ~/Downloads/priv_key.pem ec2-add-keypair cre8priv-keypair
-sudo chmod 600 ~/Downloads/priv_key.pem #600 allows the user to read and write (executing this file won't be necessary, so we don't need to add that as a permission
-sed -i '1,4d' ~/Downloads/priv_key.pem #removes the first 4 lines of the file (the savelog information) 
-#need a way to delete the last 2 lines of the file - or will it be ignored anyway?
-export EC2_PRIVATE_KEY=~/Downloads/priv_key.pem 
+#Assign the pk-PK.pem file to EC2_PRIVATE_KEY
+#use same loop as above...
+export EC2_PRIVATE_KEY=$EC2_PRIVATE_PATH
 
 #asker the user to choose an ami for their instance
 echo "Please choose an ami from the following list.  Enter the ami below AND also keep track of the url - you will need it to ssh into your instance." #this command can be better...
