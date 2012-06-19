@@ -1,7 +1,5 @@
 #!/bin/bash
-#download and install the ec2-api tools
-wget http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip
-unzip ec2-api-tools.zip
+#install the ec2-api command line tools
 sudo apt-get install ec2-api-tools
 
 
