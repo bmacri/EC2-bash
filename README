@@ -1,1 +1,1 @@
-A bash script to create an EC2 instance and ssh into the instance.  Generates a private key and prompts the user to choose an ami for the instance. 
+A bash script to create an EC2 instance and then ssh into it.  Generates a private key and prompts the user to choose an ami for the instance. 
