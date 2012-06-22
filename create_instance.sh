@@ -4,21 +4,12 @@ sudo apt-get install ec2-api-tools
 
 
 #Assign the cert-CERT.pem file to EC2_CERT_PATH
-#need to figure out the best way to do this...while loop I think?
 
-while
 echo "Enter the absolute path of your public key (cert-CERT.pem): "
 read  EC2_CERT_PATH
-echo "The absolute path you entered is $EC2_CERT_PATH.  Is this correct? (y/n) "
-read yesno
-if [ "$yesno" == 'y']; then
-	export EC2_CERT=$EC2_CERT_PATH
-elif [ "$yesno" == "n"]; then 
-	go back to beginning and ask for path again
+export EC2_CERT=$EC2_CERT_PATH
 
 #Assign the pk-PK.pem file to EC2_PRIVATE_KEY
-#use same loop as above...
-export EC2_PRIVATE_KEY=$EC2_PRIVATE_PATH
 
 #asker the user to choose an ami for their instance
 echo "Please choose an ami from the following list.  Enter the ami below AND also keep track of the url - you will need it to ssh into your instance." #this command can be better...
