@@ -1,1 +1,1 @@
-A bash script to create an EC2 instance and then ssh into it.  Prompts the user to choose an ami for the instance. 
+This is a bash script that launches an ec2 instance.  The user will be prompted to choose an ami for the instance, but the machine default size is small.  Please note that you will need to set the path to your certificate and private key to the $EC2_CERT and $EC2_PRIVATE_KEY variables, respectively.  This script does NOT terminate the instance.
